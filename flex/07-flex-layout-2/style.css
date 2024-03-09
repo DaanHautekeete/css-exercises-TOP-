@@ -1,4 +1,9 @@
 body {
+  /* Add flex to the whole page */
+  display: flex;
+  /* Change the flex direction to column */
+  flex-direction: column;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
@@ -7,13 +12,15 @@ body {
 .header {
   /* Add flex to the header */
   display: flex;
-  /* Align the items in the center */
+  /* Move content to the center of the header  */
   align-items: center;
-  /* Change font size and weight */
+  /* Add space to the left of the text */
+  padding-left: 16px;
+
+  /* Change style of the font */
   font-size: 32px;
   font-weight: 900;
-  /* Add padding */
-  padding-left: 16px;
+
 
   height: 72px;
   background: darkmagenta;
@@ -21,45 +28,78 @@ body {
 }
 
 .footer {
+  /* Add flex to the footer */
+  display: flex;
+
+  /* Change position of the content */
+  justify-content: center;
+  align-items: center;
   height: 72px;
   background: #eee;
   color: darkmagenta;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: auto;
 }
 
 .sidebar {
-  /* Add flex to the sidebar */
-  display: flex;
-
-  /* Change position of the sidebar */
-  justify-self: flex-start;
-
-  /* Make sure that the sidebar doesn't shrink */
+  /* This makes it that the sidebar doesn't shrink */
   flex-shrink: 0;
 
-  /* Add padding */
-  padding-right: 16px;
+  padding: 16px;
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+}
+
+/* Change style of the sidebar links */
+.sidebar a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Change style of the list items of the sidebar */
+.sidebar ul{
+  /* Remove padding and margin */
+  padding: 0px;
+  margin: 0;
+}
+
+.sidebar li{
+  /* Remove bullet points from the list */
+  list-style: none;
+
+  /* Add some space between list items */
+  margin-bottom: 10px;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 300px;
+
+  /* Add padding and margin  */
+  padding: 16px;
+  margin: 16px;
 }
 
-.content-container{
+.content-container {
+  /* Add flex to the container of all the content (without footer and header) */
   display: flex;
-  flex-direction: row;
+  /* This makes it that the content container takes all the avaible space that there is left */
+  flex: 1;
 }
 
-
+/* Add style to the card section */
 .cards {
+  /* Add padding around the cards section */
+  padding: 32px;
+
+  /* Add flex to the container */
   display: flex;
+  
+  /* Change flex display */
   flex-wrap: wrap;
+
+  flex: 1;
+  
 }
