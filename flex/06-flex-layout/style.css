@@ -43,7 +43,6 @@ a {
 .header, .footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   padding-right: 10px;
   padding-left: 10px;
   gap: 15px;
@@ -54,10 +53,7 @@ a {
 }
 
 .footer{
- margin-top: auto;
- align-items: flex-end;
  background-color: #eeeeee;
-
 }
 
 
@@ -72,10 +68,11 @@ a {
 
 .content{
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
+  justify-content: center;
+
 }
 
 .content button{
